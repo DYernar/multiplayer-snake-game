@@ -122,9 +122,7 @@ class _GameGridState extends State<GameGrid> {
                   BlocProvider.of<SnakeGameBloc>(context).add(
                     UpdateDirectionEvent('down'),
                   );
-                  //TODO event to turn down
                 } else if (details.delta.dy < 0) {
-                  //TODO event to turn up
                   BlocProvider.of<SnakeGameBloc>(context).add(
                     UpdateDirectionEvent('up'),
                   );
@@ -132,12 +130,10 @@ class _GameGridState extends State<GameGrid> {
               },
               onHorizontalDragUpdate: (details) {
                 if (details.delta.dx > 0) {
-                  //TODO event to turn right
                   BlocProvider.of<SnakeGameBloc>(context).add(
                     UpdateDirectionEvent('right'),
                   );
                 } else if (details.delta.dx < 0) {
-                  //TODO event to turn left
                   BlocProvider.of<SnakeGameBloc>(context).add(
                     UpdateDirectionEvent('left'),
                   );
